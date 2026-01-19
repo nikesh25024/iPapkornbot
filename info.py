@@ -44,7 +44,7 @@ IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_name}</b> \n\n<b> ⚠️𝑻𝒉𝒊𝒔 𝑭𝒊𝒍𝒆 𝑨𝒖𝒕𝒐𝒎𝒂𝒕𝒊𝒄𝒂𝒍𝒍𝒚 𝑫𝒆𝒍𝒆𝒕𝒆 𝑨𝒇𝒕𝒆𝒓 𝟏 𝑴𝒊𝒏𝒖𝒕𝒆❗𝑺𝒐 𝑷𝒍𝒆𝒂𝒔𝒆 𝑭𝒐𝒓𝒘𝒂𝒓𝒅 𝑰𝒏 𝑨𝒏𝒐𝒕𝒉𝒆𝒓 𝑪𝒉𝒂𝒕‼️</b> \n\n<b>📌ध्यान दें:हमेशा टेलीग्राम 𝙎𝙖𝙫𝙚𝙙 𝙈𝙚𝙨𝙨𝙖𝙣𝙜𝙚𝙨 का उपयोग करें..!!</b>")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10</b> \n<b>♻️ Powered By: [𝑪𝒂𝒑𝒕𝒂𝒊𝒏 ||🍷>](t.me/iamnik20000)</b>")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Query: {query}</b> \n‌‌‌‌<b>IMDb Data:\n\n <b>\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10</b> \n<b>♻️ Powered By: [𝑪𝒂𝒑𝒕𝒂𝒊𝒏 ||🍷>](t.me/iamnik20000)</b>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
@@ -63,3 +63,4 @@ LOG_STR += ("Long IMDB storyline enabled." if LONG_IMDB_DESCRIPTION else "LONG_I
 LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies if movie not found\n" if SPELL_CHECK_REPLY else "SPELL_CHECK_REPLY Mode disabled\n")
 LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
+
